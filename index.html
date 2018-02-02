@@ -11,7 +11,7 @@
             $.get("http://api.openweathermap.org/data/2.5/weather?q="+city+"&&appid=7846dbf356aaaf1587d142f0c2cb1ed0", function(forecast) {
             $(".city").html("<h1>"+ city +"</h1>");
             clearField()
-            $(".temp").html("<p>The Temperature is: "+Math.floor((((forecast.main.temp - 273)*(9/5)) + 32))+"&#8457;"+"</p>");
+            $(".temp").html("<p>The Temperature is: "+Math.floor((((forecast.main.temp-273)*(9/5)) + 32))+"&#8457;"+"</p>");
                 }, "json");
                 return false;
              });
